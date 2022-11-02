@@ -1,9 +1,11 @@
 import 'package:stallet_lib/stallet_lib.dart';
 import 'package:test/test.dart';
+import 'package:uuid/uuid.dart';
 
 void main() {
   group('A group of tests', () {
-    const exercise = Exercise(
+    final exercise = Exercise(
+      id: const Uuid().v4(),
       name: 'awesome',
       value: 15,
       unit: 'kg',

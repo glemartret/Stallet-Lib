@@ -1,21 +1,21 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'session.dart';
+part of 'training.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Session _$SessionFromJson(Map<String, dynamic> json) => Session(
+Training _$TrainingFromJson(Map<String, dynamic> json) => Training(
       id: json['id'] as String,
       name: json['name'] as String,
-      exercises: (json['exercises'] as List<dynamic>)
-          .map((e) => Exercise.fromJson(e as Map<String, dynamic>))
+      sessions: (json['sessions'] as List<dynamic>)
+          .map((e) => Session.fromJson(e as Map<String, dynamic>))
           .toSet(),
     );
 
-Map<String, dynamic> _$SessionToJson(Session instance) => <String, dynamic>{
+Map<String, dynamic> _$TrainingToJson(Training instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
-      'exercises': instance.exercises.toList(),
+      'sessions': instance.sessions.toList(),
     };

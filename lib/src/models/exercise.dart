@@ -1,9 +1,11 @@
+import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'exercise.g.dart';
 
 @JsonSerializable()
-class Exercise {
+class Exercise extends Equatable {
+  final String id;
   final String name;
   final double value;
   final String unit;
@@ -11,6 +13,7 @@ class Exercise {
   final int reps;
 
   const Exercise({
+    required this.id,
     required this.name,
     required this.value,
     required this.unit,
@@ -20,6 +23,9 @@ class Exercise {
 
   factory Exercise.fromJson(Map<String, dynamic> json) =>
       _$ExerciseFromJson(json);
+
+  @override
+  List<Object?> get props => [id, name, value, unit, sets, reps];
 
   Map<String, dynamic> toJson() => _$ExerciseToJson(this);
 }

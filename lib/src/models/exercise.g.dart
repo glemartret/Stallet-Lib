@@ -7,6 +7,7 @@ part of 'exercise.dart';
 // **************************************************************************
 
 Exercise _$ExerciseFromJson(Map<String, dynamic> json) => Exercise(
+      id: json['id'] as String,
       name: json['name'] as String,
       value: (json['value'] as num).toDouble(),
       unit: json['unit'] as String,
@@ -15,6 +16,7 @@ Exercise _$ExerciseFromJson(Map<String, dynamic> json) => Exercise(
     );
 
 Map<String, dynamic> _$ExerciseToJson(Exercise instance) => <String, dynamic>{
+      'id': instance.id,
       'name': instance.name,
       'value': instance.value,
       'unit': instance.unit,
